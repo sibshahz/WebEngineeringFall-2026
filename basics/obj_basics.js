@@ -7,11 +7,19 @@ const simpleObject = {
     street: "123 Main St",
     city: "Anytown",
     country: "USA",
+    display_pc: () => {
+      console.log("22500");
+    },
+  },
+  talk: () => {
+    console.log("Hello, I am John!");
   },
 };
-const allKeys = Object.keys(simpleObject).map((item) => {
-  console.log(`Currently check key: ${item} value is: `, simpleObject[item]);
-});
+// const allKeys = Object.keys(simpleObject).map((item) => {
+//   console.log(`Currently check key: ${item} value is: `, simpleObject[item]);
+// });
+simpleObject.talk();
+simpleObject.address.display_pc();
 
 // const age = 35;
 // const gpa = 2.9;
