@@ -4,6 +4,15 @@ const app = express();
 // middleware for json
 app.use(express.json());
 
+let count = 0;
+function logMiddleWare(req, res, next) {
+  count += 1;
+  console.log("This is request number: ", count);
+  next();
+}
+
+app.use(logMiddleWare);
+
 const port = 3000;
 
 const patients = [
